@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #E50914;
+  --color-brand-hover: #F40612;
+  --color-surface: #141414;
+  --color-surface-hover: #2A2A2A;
+  --color-background: #050505;
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #A3A3A3;
+  
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-outfit);
+}
+
+@layer base {
+  body {
+    @apply bg-background text-text-primary font-sans antialiased selection:bg-brand selection:text-white;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+}
+
+/* Hide scrollbar for horizontal carousels */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
